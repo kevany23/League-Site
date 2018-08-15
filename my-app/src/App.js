@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import SiteRoutes from "./router/routes";
+import NavBar from "./navbar/navbar";
 
 class App extends Component {
   render() {
