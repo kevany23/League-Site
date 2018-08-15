@@ -1,6 +1,12 @@
-export const simpleAction = () => dispatch => {
+import * as types from "./actionTypes";
+
+
+const simpleAction = () => dispatch => {
     dispatch({
-     type: 'SIMPLE_ACTION',
+     type: types.SIMPLE_ACTION,
      payload: 'result_of_simple_action'
     })
-   }
+   };
+
+export default simpleAction;
+

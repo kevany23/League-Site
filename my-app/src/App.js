@@ -9,7 +9,7 @@ import reduce from './reducers/mainReducer';
 import SiteRoutes from "./router/routes";
 import NavBar from "./navbar/navbar";
 import configureStore from "./store/store";
-import { simpleAction } from './actions/simpleAction'
+import simpleAction from './actions/simpleAction'
 
 
 class App extends Component {
@@ -33,10 +33,10 @@ class App extends Component {
 
 const mapStateToProps = state => ({
   ...state
- })
+ });
 
  const mapDispatchToProps = dispatch => ({
   simpleAction: () => dispatch(simpleAction())
- })
+ });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
