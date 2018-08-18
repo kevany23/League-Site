@@ -18,6 +18,11 @@ class AboutPage extends Component {
         return (
             <div>
                 <h3>About</h3>
+                <p>
+                    LoLBook is a a social network in progress centered around the game League of Legends.
+                    <br/>
+                    Developed using React, Boostrap, & Redux.
+                </p>
                 <ul>
                 {postItems}
                 </ul>
