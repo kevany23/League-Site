@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import firebase from "firebase";
 
 import simpleAction from "../actions/simpleAction";
 import * as actions from "../actions/pageActions";
+import config from "../database/config";
+
+var database = firebase.initializeApp(config);
 
 class HomePage extends Component {
 
@@ -13,6 +17,7 @@ class HomePage extends Component {
         this.state = { posts: [] };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.pushFirebase = this.pushFirebase.bind(this);
     }
 
     handleChange(event) {
@@ -25,7 +30,15 @@ class HomePage extends Component {
         this.props.addPost(this.state.value);
         this.forceUpdate();
         this.state.value="";
+        this.pushFirebase();
     }
+
+    pushFirebase() {
+        console.log(firebase.database());
+        firebase.database().ref("/test/t1").set({field1:"foobar"});
+    }
+
+
 
     render() {
         const postItems = this.props.posts.map(
