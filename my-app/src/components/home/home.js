@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import firebase from "firebase";
 
-import simpleAction from "../actions/simpleAction";
-import * as actions from "../actions/pageActions";
-import config from "../database/config";
+import simpleAction from "../../actions/simpleAction";
+import * as actions from "../../actions/pageActions";
+import config from "../../database/config";
+import Login from "../login/login";
 
 var database = firebase.initializeApp(config);
 

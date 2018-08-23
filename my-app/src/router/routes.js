@@ -1,9 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
-import HomePage from "../home/home";
-import AboutPage from "../about/about";
-import ProfilePage from "../profile/profile";
+import HomePage from "../components/home/home";
+import AboutPage from "../components/about/about";
+import ProfilePage from "../components/profile/profile";
+import SiteHome from "../components/home/siteHome";
 
 import NavBar from "../navbar/navbar";
 
@@ -12,7 +13,7 @@ const SiteRoutes = () => (
         <div>
         <NavBar/>
         <Switch>
-            <Route exact path="/" component={HomePage} />
+            <Route exact path="/" component={SiteHome} />
             <Route path="/about" component={AboutPage} />
             <Route path="/profile" component={ProfilePage} />
         </Switch>
