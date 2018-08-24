@@ -6,7 +6,7 @@ import AboutPage from "../components/about/about";
 import ProfilePage from "../components/profile/profile";
 import SiteHome from "../components/home/siteHome";
 
-import NavBar from "../navbar/navbar";
+import NavBar from "../components/navbar/navbar";
 
 const SiteRoutes = () => (
     <Router>

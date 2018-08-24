@@ -4,7 +4,7 @@ import mainReducer from '../reducers/mainReducer';
 
 // you can add parameter to configureStore() for initial state
 
-const initialState = {posts:["post1", "hello"]};
+const initialState = {posts:["post1", "hello"], isLoggedIn: false};
 
 export default function configureStore() {
  return createStore(

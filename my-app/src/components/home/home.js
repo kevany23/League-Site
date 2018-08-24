@@ -9,7 +9,7 @@ import * as actions from "../../actions/pageActions";
 import config from "../../database/config";
 import Login from "../login/login";
 
-var database = firebase.initializeApp(config);
+//var database = firebase.initializeApp(config);
 
 class HomePage extends Component {
 
@@ -36,7 +36,7 @@ class HomePage extends Component {
 
     pushFirebase() {
         console.log(firebase.database());
-        firebase.database().ref("/test/t1").set({field1:"foobar"});
+        firebase.database().ref("/test/t1").set({field1:"foobar1"});
     }
 
 

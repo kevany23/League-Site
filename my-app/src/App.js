@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 
 import reduce from './reducers/mainReducer';
 import SiteRoutes from "./router/routes";
-import NavBar from "./navbar/navbar";
+import NavBar from "./components/navbar/navbar";
 import configureStore from "./store/store";
 import simpleAction from './actions/simpleAction'
 
